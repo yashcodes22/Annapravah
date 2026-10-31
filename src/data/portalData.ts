@@ -1,0 +1,76 @@
+
+export const GOVERNMENT_CREDENTIALS = {
+  userId: 'ADMIN',
+  password: '987654321',
+};
+
+export const SELLERS = [
+  {
+    userId: 'N2001',
+    password: 'P963258741',
+    name: 'Yuvraj Singh',
+    shopName: 'Punjab Grocery',
+    zone: 'North',
+    state: 'Punjab',
+    city: 'Amritsar',
+    area: 'Ranjit Avenue',
+  },
+  {
+    userId: 'S2002',
+    password: 'K852147963',
+    name: 'Vijay',
+    shopName: 'Kochi Grocery',
+    zone: 'South',
+    state: 'Kerela',
+    city: 'Kochi',
+    area: 'MG road',
+  },
+  {
+    userId: 'E2003',
+    password: 'A741258963',
+    name: 'Amish Singh',
+    shopName: 'Guwahati Grocery',
+    zone: 'East',
+    state: 'Assam',
+    city: 'Guwahati',
+    area: 'GS road',
+  },
+  {
+    userId: 'W2004',
+    password: 'G321654987',
+    name: 'Paresh Shah',
+    shopName: 'Vadodara Grocery',
+    zone: 'West',
+    state: 'Gujarat',
+    city: 'Vadodara',
+    area: 'Sama',
+  },
+  {
+    userId: 'C2005',
+    password: 'M789456123',
+    name: 'Shailendra Sharma',
+    shopName: 'MP Grocery',
+    zone: 'Central',
+    state: 'Madhya Pradesh',
+    city: 'Indore',
+    area: 'Vijay Nagar',
+  },
+];
+
+export const CONSUMERS = [
+  { userId: 'R-P1001', password: '123', name: 'Kapil Singh', associatedSellerId: 'N2001', shopName: 'Punjab Grocery' },
+  { userId: 'R-P1002', password: '456', name: 'Gurpreet Dosanjh', associatedSellerId: 'N2001', shopName: 'Punjab Grocery' },
+  { userId: 'R-P1003', password: '789', name: 'Balwinder Singh', associatedSellerId: 'N2001', shopName: 'Punjab Grocery' },
+  { userId: 'R-K1001', password: '987', name: 'Raju', associatedSellerId: 'S2002', shopName: 'Kochi Grocery' },
+  { userId: 'R-K1002', password: '654', name: 'Ramswami', associatedSellerId: 'S2002', shopName: 'Kochi Grocery' },
+  { userId: 'R-K1003', password: '321', name: 'Krishna Iyer', associatedSellerId: 'S2002', shopName: 'Kochi Grocery' },
+  { userId: 'R-G1001', password: '147', name: 'Amit', associatedSellerId: 'E2003', shopName: 'Guwahati Grocery' },
+  { userId: 'R-G1002', password: '258', name: 'Akash', associatedSellerId: 'E2003', shopName: 'Guwahati Grocery' },
+  { userId: 'R-G1003', password: '369', name: 'Mohit', associatedSellerId: 'E2003', shopName: 'Guwahati Grocery' },
+  { userId: 'R-V1001', password: '963', name: 'Ketan Patel', associatedSellerId: 'W2004', shopName: 'Vadodara Grocery' },
+  { userId: 'R-V1002', password: '852', name: 'Jignesh Gandhi', associatedSellerId: 'W2004', shopName: 'Vadodara Grocery' },
+  { userId: 'R-V1003', password: '741', name: 'Raj Shah', associatedSellerId: 'W2004', shopName: 'Vadodara Grocery' },
+  { userId: 'R-I1001', password: '159', name: 'Priyansh Sharma', associatedSellerId: 'C2005', shopName: 'MP Grocery' },
+  { userId: 'R-I1002', password: '357', name: 'Dinesh Verma', associatedSellerId: 'C2005', shopName: 'MP Grocery' },
+  { userId: 'R-I1003', password: '842', name: 'Harsh Sharma', associatedSellerId: 'C2005', shopName: 'MP Grocery' },
+];

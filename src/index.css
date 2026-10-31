@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-gov-saffron: #FF9933;
+  --color-gov-green: #138808;
+  --color-gov-blue: #000080;
+  --color-gov-offwhite: #F8F9FA;
+  --color-gov-ink: #141414;
+}
+
+body {
+  @apply bg-gov-offwhite text-gov-ink antialiased font-sans;
+}
+
+/* Technical UI Utils */
+.data-grid-item {
+  @apply border-b border-gov-ink/10 py-3 transition-all cursor-pointer;
+}
+
+.data-grid-item:hover {
+  @apply bg-gov-ink text-gov-offwhite;
+}
+
+.label-caps {
+  @apply text-[10px] font-black uppercase tracking-[0.2em] opacity-40;
+}
+
+/* Custom scroller for that technical feel */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gov-blue/20 rounded-full;
+}

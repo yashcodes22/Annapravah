@@ -1,0 +1,6 @@
+{
+  "name": "Smart PDS Monitoring Platform",
+  "description": "",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": []
+}
