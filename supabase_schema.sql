@@ -258,8 +258,11 @@ CREATE TRIGGER trg_audit_grievances
 
 -- ----------------------------------------------------------------
 -- STEP 6: ROW LEVEL SECURITY
--- All tables locked down — open policies for now (Phase 1 dev)
--- Tighten these using Fix Prompt #1 before going live
+-- RLS is enabled on every table.  With no policies attached yet,
+-- the tables are closed to anon/authenticated by default (fail
+-- closed).  Run supabase_rls.sql AFTER this file to attach the
+-- role-based policies (admin / dealer / beneficiary) and revoke
+-- the anon role.  Do NOT add open "USING (true)" policies here.
 -- ----------------------------------------------------------------
 
 ALTER TABLE users          ENABLE ROW LEVEL SECURITY;
@@ -270,16 +273,6 @@ ALTER TABLE alerts         ENABLE ROW LEVEL SECURITY;
 ALTER TABLE stock_receipts ENABLE ROW LEVEL SECURITY;
 ALTER TABLE grievances     ENABLE ROW LEVEL SECURITY;
 ALTER TABLE audit_log      ENABLE ROW LEVEL SECURITY;
-
--- Dev-mode open policies (REPLACE with Fix Prompt #1 before pilot)
-CREATE POLICY "dev_open_users"          ON users          FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "dev_open_beneficiaries"  ON beneficiaries  FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "dev_open_inventory"      ON inventory      FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "dev_open_transactions"   ON transactions   FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "dev_open_alerts"         ON alerts         FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "dev_open_stock_receipts" ON stock_receipts FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "dev_open_grievances"     ON grievances     FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "dev_open_audit_log"      ON audit_log      FOR ALL USING (true) WITH CHECK (true);
 
 
 -- ----------------------------------------------------------------
