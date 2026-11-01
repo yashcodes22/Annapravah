@@ -95,12 +95,13 @@ VITE_SUPABASE_ANON_KEY=<your-publishable-key>
 
 ### 3 · Set up the database
 
-In the Supabase SQL Editor, run **in order**:
+In the Supabase SQL Editor, paste and run **one file**:
 
-1. [`supabase_schema.sql`](supabase_schema.sql) — tables, indexes, audit triggers, seed data
-2. [`supabase_rls.sql`](supabase_rls.sql) — role-based Row-Level Security policies
+- [`supabase_full_setup.sql`](supabase_full_setup.sql) — complete setup: tables, indexes, audit triggers, views, seed data **and** role-based Row-Level Security, all in order. Re-runnable.
 
-> ⚠️ Always run the RLS file after the schema. The schema enables RLS in fail-closed mode (no policies ⇒ no access).
+> ⚠️ This is a destructive reset — it recreates all tables and the 9 demo accounts. Existing hand-made data is wiped.
+>
+> Alternative files: [`supabase_schema.sql`](supabase_schema.sql) (schema + seed only, no RLS) and [`supabase_rls.sql`](supabase_rls.sql) (RLS-only lockdown for an existing database — non-destructive).
 
 ### 4 · Run
 
